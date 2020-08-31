@@ -12,23 +12,28 @@ export class MenuService {
     this.menuService = [
       {
         label: 'Forum',
-        iconClass: 'icofont-chat'
+        iconClass: 'icofont-chat',
+        link: ''
       },
       {
         label: 'Checkpoints',
-        iconClass: 'icofont-google-map'
+        iconClass: 'icofont-google-map',
+        link: ''
       },
       {
         label: 'Button',
-        iconClass: 'icofont-warning-alt'
+        iconClass: 'icofont-warning-alt',
+        link: ''
       },
       {
         label: 'Settings',
-        iconClass: 'icofont-gear-alt'
+        iconClass: 'icofont-gear-alt',
+        link: ''
       },
       {
         label: 'Profile',
-        iconClass: 'icofont-user'
+        iconClass: 'icofont-user',
+        link: '/profile'
       }
     ];
     return this.menuService;

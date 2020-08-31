@@ -1,7 +1,7 @@
 <div class="navbar">
-  <a *ngFor="let item of navbarItems" class="item" href="#">
+  <a *ngFor="let item of navbarItems" class="item" [routerLink]="item.link">
     <div class="item__icon-container">
-      <i class="item__icon" [ngClass]="item.iconClass"></i>
+      <i class="item__icon" [ngClass]="[item.iconClass, this.currentRoute === item.link? 'item__icon--selected': '']"></i>
     </div>
     <h4 class="item__label">{{item.label}}</h4>
   </a>

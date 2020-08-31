@@ -16,9 +16,11 @@
 .item {
   height: 100%;
   padding-top: 5px;
-  display: block;
+  display: flex;
   text-decoration: none;
   text-align: center;
+  flex-flow: column;
+  justify-content: center;
 
   &__icon-container {
     margin-bottom: 3px;
@@ -27,6 +29,10 @@
   &__icon {
     font-size: 25px;
     color: $color-grey-200;
+
+    &--selected {
+      color: $color-pink;
+    }
   }
 
   &__label {

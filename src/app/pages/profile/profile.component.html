@@ -1,61 +1,55 @@
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
-<p>profile works!</p>
+<div class="profile">
+
+  <!-- USER PRIMARY INFO -->
+  <div class="user">
+    <img class="user__picture"[src]="this.userProfileImage" alt="Profile Picture">
+    <div class="user__info">
+      <!-- <h4 class="heading-tertiary">{{this.userName}}</h4> -->
+      <h4 class="heading-tertiary">Natalia Barrantes</h4>
+      <p class="user__date">{{this.userAge}} years old</p>
+    </div>
+  </div>
+
+  <!-- BUTTON CONTAINER -->
+  <div class="action">
+    <button class="action__button btn btn--rounded-high btn--pink btn--bold">Personal Information</button>
+  </div>
+
+  <!-- USER DETAILS FORMS -->
+  <form class="details" [formGroup]="this.detailsForm">
+    <div class="item">
+      <input type="text"  formControlName="name">
+      <div class="item__icon-container">
+        <i class="item__icon icofont-ui-user"></i>
+      </div>
+    </div>
+
+    <div class="item">
+      <input type="text" formControlName="birthday">
+      <div class="item__icon-container">
+        <i class="item__icon icofont-birthday-cake"></i>
+      </div>
+    </div>
+
+    <div class="item">
+      <input type="text" formControlName="gmail">
+      <div class="item__icon-container">
+        <i class="item__icon icofont-email"></i>
+      </div>
+    </div>
+
+    <div class="item">
+      <input type="text" formControlName="location">
+      <div class="item__icon-container">
+        <i class="item__icon icofont-google-map"></i>
+      </div>
+    </div>
+
+    <div class="item">
+      <input type="text" formControlName="phoneNumber">
+      <div class="item__icon-container">
+        <i class="item__icon icofont-phone"></i>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,22 @@
+.btn {
+  background: none;
+  border: none;
+  box-shadow: 0 3px 7px rgba($color-black-800, .15);
+
+  &--pink {
+    background-color: $color-pink;
+    color: $color-white-100;
+  }
+
+  &--rounded {
+    border-radius: 3px;
+  }
+
+  &--rounded-high {
+    border-radius: 30px;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+}

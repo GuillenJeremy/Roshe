@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 import { NavBarItem } from 'src/app/interfaces/common.types';
 import {MenuService} from '../../../service/menu-service/menu.service';
 @Component({
@@ -8,10 +9,17 @@ import {MenuService} from '../../../service/menu-service/menu.service';
 })
 export class NavbarComponent implements OnInit {
   navbarItems: NavBarItem[];
-  constructor(private menuService: MenuService) { }
+  currentRoute: any;
+  constructor(private menuService: MenuService, private router: Router) { }
 
   ngOnInit(): void {
     this.navbarItems = this.menuService.getMenuItems();
+    this.router.events.subscribe(changes => {
+      if(changes['urlAfterRedirects']) {
+        this.currentRoute = changes['urlAfterRedirects'];
+        console.log(this.currentRoute);
+      }
+    })
   }
 
 }
