@@ -1,6 +1,6 @@
 <div class="forum">
   <!-- Search input -->
-  <div class="search">
+  <section class="search">
     <div class="search__container">
       <input type="text" class="search__input input input--rounded-s">
       <div class="search__icon-container">
@@ -8,19 +8,20 @@
       </div>
     </div>
     <a class="search__cancel">Cancel</a>
-  </div>
+  </section>
 
   <!-- new post section -->
-  <div class="user">
+  <section class="user">
     <div class="user__avatar">
       <img class="user__pic" [src]="this.userProfilePicture" alt="User Profile Picture">
     </div>
     <div class="user__new-post">
       <input placeholder="Post" class="user__input input input--rounded-h">
-      <!-- <div class="user__icon-container"> -->
-      <!-- </div> -->
     </div>
-  </div>
+  </section>
 
   <!-- stories section -->
+  <section class="stories">
+    <app-carrousel [carouselConfig]="this.carouselConfiguration" [images]="this.carouselImages"></app-carrousel>
+  </section>
 </div>

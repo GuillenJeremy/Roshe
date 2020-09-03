@@ -1,1 +1,19 @@
-<p>carrousel works!</p>
+<div class="carousel" [ngStyle]="{'height.px': this.carouselConfig.carouselHeight}">
+  <!-- carousel left arrow -->
+  <div class="carousel__icon-container carousel__icon--left">
+    <i class="carousel__icon icofont-rounded-left"></i>
+  </div>
+
+  <!-- images container -->
+  <div class="carousel__images-wrapper">
+    <div *ngFor="let image of images" class="image" [ngStyle]="{'height.px': this.carouselConfig.imagesConfiguration.height, 'width.px': this.carouselConfig.imagesConfiguration.width}">
+      <img [src]="image">
+    </div>
+  </div>
+
+  <!-- carousel right arrow -->
+  <div class="carousel__icon-container carousel__icon--right">
+    <i class="carousel__icon icofont-rounded-right"></i>
+  </div>
+
+</div>
