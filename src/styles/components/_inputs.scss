@@ -1,0 +1,13 @@
+.input {
+  width: 100%;
+  background: none;
+  border: 1px solid rgba($color-black-800, .6);
+  box-shadow: 0 3px 7px rgba($color-black-800, .15);
+  &--rounded-s {
+    border-radius: 3px;
+  }
+
+  &--rounded-h {
+    border-radius: 30px;
+  }
+}

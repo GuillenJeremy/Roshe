@@ -1,0 +1,111 @@
+@import 'abstracts/variables';
+
+.forum {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.search {
+  padding: 0 5%;
+  margin-top: 2rem;
+  height: 4.4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &__container {
+    flex-grow: 1;
+    position: relative;
+  }
+
+  &__input {
+    padding-left: 2.5rem;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    height: 2.8rem;
+    width: 100%;
+    color: $color-grey-100;
+
+  }
+
+  &__icon-container {
+    position: absolute;
+    width: 3rem;
+    height: 2.8rem;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    font-size: 1.4rem;
+    color: rgba($color-black-800, .7);
+  }
+
+  &__cancel {
+    display: inline-block;
+    flex-shrink: 0;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: $color-blue;
+    margin-left: 1.5rem;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      background: $color-blue;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+
+    &:hover::after {
+      width: 100%;
+      left: 0;
+    }
+  }
+}
+
+.user {
+  margin-top: 1.5rem;
+  display: flex;
+  padding: 0 4%;
+  align-items: center;
+
+  &__avatar {
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-right: 1.5rem;
+  }
+
+  &__pic {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+
+  &__new-post {
+    flex: 1;
+    height: 3.5rem;
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    padding-left: 1rem;
+    outline: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+  }
+}

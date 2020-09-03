@@ -7,13 +7,17 @@ import {EmergencyButtonComponent} from './components/emergency-button/emergency-
 import {NavbarComponent} from './components/common/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { ForumComponent } from './pages/forum/forum.component';
+import { CarrouselComponent } from './components/carrousel/carrousel.component';
 @NgModule({
   declarations: [
     AppComponent,
     EmergencyButtonComponent,
     HomeComponent,
     NavbarComponent,
-    ProfileComponent
+    ProfileComponent,
+    ForumComponent,
+    CarrouselComponent
   ],
   imports: [
     BrowserModule,

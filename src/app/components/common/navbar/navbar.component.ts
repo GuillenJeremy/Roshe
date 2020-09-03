@@ -17,7 +17,6 @@ export class NavbarComponent implements OnInit {
     this.router.events.subscribe(changes => {
       if(changes['urlAfterRedirects']) {
         this.currentRoute = changes['urlAfterRedirects'];
-        console.log(this.currentRoute);
       }
     })
   }

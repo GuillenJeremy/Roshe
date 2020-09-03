@@ -13,7 +13,7 @@ export class MenuService {
       {
         label: 'Forum',
         iconClass: 'icofont-chat',
-        link: ''
+        link: '/forum'
       },
       {
         label: 'Checkpoints',
