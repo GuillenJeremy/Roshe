@@ -9,6 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ForumComponent } from './pages/forum/forum.component';
 import { CarrouselComponent } from './components/carrousel/carrousel.component';
+import { PostComponent } from './components/post/post.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { CarrouselComponent } from './components/carrousel/carrousel.component';
     NavbarComponent,
     ProfileComponent,
     ForumComponent,
-    CarrouselComponent
+    CarrouselComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
