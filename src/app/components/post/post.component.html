@@ -1,1 +1,30 @@
-<p>post works!</p>
+<div class="post">
+  <!-- user of the post -->
+  <header class="post__header">
+
+    <div class="post__avatar">
+      <img [src]="this.postInfomation.userAvatar" alt="userPicture">
+    </div>
+
+    <div class="post__details">
+      <h6 class="post__user">{{this.postInfomation.userName}}</h6>
+      <p class="post__hashtags">{{this.postInfomation.postHashtags}}</p>
+    </div>
+  </header>
+
+  <div class="post__body">
+    <img class="post__content" [src]="this.postInfomation.postImage" alt="post__image">
+  </div>
+
+  <div class="post__footer">
+    <div class="icon icon--red">
+      <i class="icofont-heart"></i>
+    </div>
+    <div class="icon icon--blue">
+      <i class="icofont-book-mark"></i>
+    </div>
+    <div class="icon">
+      <i class="icofont-share"></i>
+    </div>
+  </div>
+</div>

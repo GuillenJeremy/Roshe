@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as faker from 'faker';
-import { CarouselConfig } from 'src/app/interfaces/common.types';
+import { CarouselConfig, PostInfo } from 'src/app/interfaces/common.types';
 @Component({
   selector: 'app-forum',
   templateUrl: './forum.component.html',
@@ -10,12 +10,14 @@ export class ForumComponent implements OnInit {
   userProfilePicture: any;
   carouselImages: string[] = [];
   carouselConfiguration: CarouselConfig;
+  posts: PostInfo;
   constructor() { }
 
   ngOnInit(): void {
     this.userProfilePicture = faker.image.avatar();
     this.getCarouselImages();
     this.createCarouselConfiguration();
+    this.getPosts();
   }
 
   private getCarouselImages() {
@@ -28,12 +30,21 @@ export class ForumComponent implements OnInit {
 
   private createCarouselConfiguration() {
     this.carouselConfiguration = {
-      carouselHeight: 100,
+      carouselHeight: 110,
       imagesConfiguration: {
         width: 90,
-        height: 100
+        height: 110
       }
     }
+  }
+
+  private getPosts() {
+    this.posts = {
+      userAvatar: faker.image.avatar(),
+      userName: 'Evangeline',
+      postHashtags: '#MyExperience',
+      postImage: faker.image.animals()
+    };
   }
 
 }

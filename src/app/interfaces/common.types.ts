@@ -13,3 +13,10 @@ export interface CarouselConfig {
   carouselHeight: number;
   imagesConfiguration:  CarouselImageConfiguration
 }
+
+export interface PostInfo {
+  userAvatar: string;
+  userName: string;
+  postHashtags: string;
+  postImage: string;
+}
