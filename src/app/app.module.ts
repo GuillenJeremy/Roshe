@@ -10,6 +10,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { ForumComponent } from './pages/forum/forum.component';
 import { CarrouselComponent } from './components/carrousel/carrousel.component';
 import { PostComponent } from './components/post/post.component';
+import { SettingsComponent } from './pages/settings/settings.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { PostComponent } from './components/post/post.component';
     ProfileComponent,
     ForumComponent,
     CarrouselComponent,
-    PostComponent
+    PostComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
