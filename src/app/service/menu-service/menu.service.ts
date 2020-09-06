@@ -23,7 +23,7 @@ export class MenuService {
       {
         label: 'Button',
         iconClass: 'icofont-warning-alt',
-        link: ''
+        link: '/emergency'
       },
       {
         label: 'Settings',

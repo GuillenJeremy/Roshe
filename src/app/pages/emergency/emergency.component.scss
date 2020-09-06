@@ -1,0 +1,80 @@
+
+@import 'abstracts/variables';
+.emergency {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.button {
+  width: 80%;
+  height: 50%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &__image {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    background: url('../../../assets/icons/Boton\ sin\ mano.svg') no-repeat;
+    box-shadow: 0 0 7px rgba($color-black-800, .6);
+    margin: 0 auto;
+    position: relative;
+    background-size: cover;
+    &::after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      content: "";
+      animation-name: beating_animation;
+      animation-duration: 1.5s;
+      animation-delay: .5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      background: $color-pink;
+    }
+  }
+}
+
+.description {
+  width: 80%;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%);
+
+  &__text {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+
+    span {
+      color: $color-pink;
+    }
+  }
+}
+
+@keyframes beating_animation {
+  0% {
+    opacity: .4;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    top: 0;
+    left: 0;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.18);
+    transform-origin: 50% 50%;
+    top: 0;
+    left: 0;
+  }
+}
