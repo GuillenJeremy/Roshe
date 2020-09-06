@@ -28,7 +28,7 @@ export class MenuService {
       {
         label: 'Settings',
         iconClass: 'icofont-gear-alt',
-        link: ''
+        link: '/settings'
       },
       {
         label: 'Profile',

@@ -1,0 +1,62 @@
+@import 'abstracts/variables';
+.settings {
+  height: 100%;
+  padding-top: 2rem;
+
+  &__group {
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__header {
+    padding-left: 3%;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: 600;
+    color: $color-pink;
+  }
+}
+
+.setting {
+  display: block;
+  padding-bottom: 1.2rem;
+  padding-top: 1.2rem;
+  border-bottom: 1px solid rgba($color-black-800, .2);
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transition: width .5s ease 0s, left .5s ease 0s;
+    background: rgba($color-grey-500 ,  .4);
+  }
+
+  &:hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+
+
+  &__header {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    padding-left: 3%;
+    font-weight: 500;
+  }
+
+  &__description {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    padding-left: 3%;
+    font-weight: 700;
+    color: rgba($color-black-800, $alpha: .4);
+    margin-top: 2px;
+  }
+}

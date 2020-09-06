@@ -20,3 +20,14 @@ export interface PostInfo {
   postHashtags: string;
   postImage: string;
 }
+
+interface MenuItem {
+  item: string;
+  itemDescription?: string;
+  hasItemDesription: boolean;
+}
+
+export interface SettingMenuItem {
+  group: string;
+  items: MenuItem[];
+}
