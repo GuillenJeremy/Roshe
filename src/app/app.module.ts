@@ -11,6 +11,7 @@ import { ForumComponent } from './pages/forum/forum.component';
 import { CarrouselComponent } from './components/carrousel/carrousel.component';
 import { PostComponent } from './components/post/post.component';
 import { SettingsComponent } from './pages/settings/settings.component';
+import { EmergencyComponent } from './pages/emergency/emergency.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { SettingsComponent } from './pages/settings/settings.component';
     ForumComponent,
     CarrouselComponent,
     PostComponent,
-    SettingsComponent
+    SettingsComponent,
+    EmergencyComponent
   ],
   imports: [
     BrowserModule,
