@@ -4,6 +4,10 @@
   height: 100%;
   width: 100%;
   position: relative;
+  transition: all .5s;
+  &--darker {
+    background: rgba($color-grey-100, .2);
+  }
 }
 
 .button {
@@ -61,20 +65,100 @@
   }
 }
 
-@keyframes beating_animation {
-  0% {
-    opacity: .4;
-    transform: scale(1);
-    transform-origin: 50% 50%;
-    top: 0;
-    left: 0;
+.modal {
+  width: 80%;
+  height: 65%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $color-white-100;
+  border-radius: 3px;
+  padding: 3%;
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+
+
+  &__header {
+    width: 100%;
+    height: 10%;
+    padding-bottom: 3px;
+    border-bottom: 1px solid rgba($color-black-800, .4);
+    h5 {
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      font-weight: 400;
+    }
   }
 
-  100% {
-    opacity: 0;
-    transform: scale(1.18);
-    transform-origin: 50% 50%;
-    top: 0;
-    left: 0;
+  &__body {
+    width: 100%;
+    height: 90%;
+    padding-top: 1rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+  }
+
+  &__description-container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: 500;
+  }
+
+  &__code-container {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    border-radius: 3px;
+    border: 1px solid rgba($color-black-800, .6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__code {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+
+    &--white {
+      color: $color-white-100;
+    }
+  }
+
+  &__option-wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2.5rem;
+  }
+
+  &__option {
+    display: flex;
+    border-radius: 50%;
+    background: $color-pink;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button {
+    width: 70px;
+    height: 30px;
+    box-shadow: none;
   }
 }
+
+

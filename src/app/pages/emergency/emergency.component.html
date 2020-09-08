@@ -1,5 +1,5 @@
-<div class="emergency">
-  <div class="button">
+<div class="emergency" [ngClass]="{'emergency--darker': this.showConfirmationModal}">
+  <div class="button" (click)="this.onButtonClicked()">
     <div class="button__image">&nbsp;</div>
   </div>
   <div class="description">
@@ -8,5 +8,38 @@
       an alert will be sent to your
       <span>Emergency Contacts</span>
     </p>
+  </div>
+
+  <!-- CONFIRMATION MODAL -->
+  <div class="modal modal--open" *ngIf="this.showConfirmationModal">
+    <div class="modal__header">
+      <h5>Confirm your emergency!</h5>
+    </div>
+    <!-- MODAL BODY -->
+    <div class="modal__body">
+      <div class="modal__description-container">
+        <p class="modal__description">Press the circle that contains the number showed inside the box</p>
+      </div>
+      <!-- MODAL DESCRIPTION -->
+      <div class="modal__code-container">
+        <p class="modal__code">
+          {{this.code}}
+        </p>
+      </div>
+      <div class="modal__option-wrapper">
+        <div class="modal__option" (click)="this.checkCode(1)">
+          <p class="modal__code modal__code--white">1</p>
+        </div>
+        <div class="modal__option" (click)="this.checkCode(2)">
+          <p class="modal__code modal__code--white">2</p>
+        </div>
+        <div class="modal__option" (click)="this.checkCode(3)">
+          <p class="modal__code modal__code--white">3</p>
+        </div>
+      </div>
+      <div class="modal__actions">
+        <button (click)="this.closeConfirmationModal()" class="modal__button btn btn--transparent btn--rounded-high btn--pink">Cancel</button>
+      </div>
+    </div>
   </div>
 </div>
