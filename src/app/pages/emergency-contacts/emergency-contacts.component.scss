@@ -1,0 +1,102 @@
+@import 'abstracts/variables';
+.contacts {
+  height: 100%;
+  position: relative;
+  transition: all .5s;
+  &__content {
+    height: 93%;
+    padding-top: 2%;
+    overflow: auto;
+  }
+
+  &--dark {
+    background: rgba($color-grey-100, .2);
+  }
+}
+
+.header {
+  width: 100%;
+  height: 7%;
+  box-shadow: 0 3px 7px rgba($color-black-800, .15);
+  display: flex;
+  align-items: center;
+  padding: 0 2%;
+  background: $color-pink;
+
+  &__back {
+    font-size: 2rem;
+    color: $color-white-100;
+    display: inline-block;
+    margin-right: .7rem;
+    text-decoration: none;
+  }
+
+  &__new {
+    font-size: 2rem;
+    display: block;
+    margin-left: auto;
+    color: $color-white-100;
+    text-decoration: none;
+  }
+
+  &__title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    color: $color-white-100;
+  }
+}
+
+.modal {
+  width: 70%;
+  height: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+  animation-name: fade-in;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  background: $color-white-100;
+
+  &__header {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    border-bottom: 1px solid rgba($color-black-800, .4);
+
+    h5 {
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      font-weight: 500;
+    }
+  }
+
+  &__body {
+    padding: 1rem;
+    height: 85%;
+  }
+
+  &__description {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    text-align: center;
+  }
+
+  &__actions {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__button {
+    height: 30px;
+    width: 35%;
+    min-width: 55px;
+  }
+}

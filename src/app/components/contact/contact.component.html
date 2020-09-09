@@ -1,0 +1,14 @@
+<div class="contact">
+  <div class="contact__image">
+    <img [src]="this.contactInfo.contactPicture" alt="contact__picture">
+  </div>
+  <div class="contact__details">
+    <h5 class="contact__name">
+      {{contactInfo.contactName}}
+    </h5>
+    <p class="contact__number">{{contactInfo.contactNumber}}</p>
+  </div>
+  <div class="contact__actions" (click)="this.onDeleteContact(contactInfo)">
+    <span class="contact__icon"><i class="icofont-ui-close"></i></span>
+  </div>
+</div>

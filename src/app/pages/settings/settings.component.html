@@ -1,7 +1,7 @@
 <section class="settings">
   <div *ngFor="let settingGroup of settingsItems" class="settings__group">
     <h4 class="settings__header">{{settingGroup.group}}</h4>
-    <a *ngFor="let item of settingGroup.items" class="setting">
+    <a routerLink="contacts" *ngFor="let item of settingGroup.items" class="setting">
       <h6 class="setting__header">{{item.item}}</h6>
       <p *ngIf="item.hasItemDesription" class="setting__description">{{item.itemDescription}}</p>
     </a>

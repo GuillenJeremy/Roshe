@@ -4,6 +4,7 @@ import {ProfileComponent} from './pages/profile/profile.component';
 import { ForumComponent } from './pages/forum/forum.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { EmergencyComponent } from './pages/emergency/emergency.component';
+import { EmergencyContactsComponent } from './pages/emergency-contacts/emergency-contacts.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'emergency',
     component: EmergencyComponent
+  },
+  {
+    path: 'settings/contacts',
+    component: EmergencyContactsComponent
   }
 ];
 

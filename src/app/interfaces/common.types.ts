@@ -31,3 +31,9 @@ export interface SettingMenuItem {
   group: string;
   items: MenuItem[];
 }
+
+export interface ContactInfo {
+  contactPicture: string;
+  contactName: String;
+  contactNumber: String;
+}
