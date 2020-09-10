@@ -13,6 +13,7 @@ import { SettingsComponent } from './pages/settings/settings.component';
 import { EmergencyComponent } from './pages/emergency/emergency.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { EmergencyContactsComponent } from './pages/emergency-contacts/emergency-contacts.component';
+import { AddContactComponent } from './pages/add-contact/add-contact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { EmergencyContactsComponent } from './pages/emergency-contacts/emergency
     SettingsComponent,
     EmergencyComponent,
     ContactComponent,
-    EmergencyContactsComponent
+    EmergencyContactsComponent,
+    AddContactComponent
   ],
   imports: [
     BrowserModule,
