@@ -1,1 +1,9 @@
-<p>add-contact works!</p>
+<section class="contacts">
+  <header class="header">
+    <a class="header__back" routerLink="/settings/contacts"><i class="header__icon icofont-arrow-left"></i></a>
+    <h5 class="header__title">Add Contacts</h5>
+  </header>
+  <div class="contacts__content">
+    <app-contact [isDeleteMode]="false" (onContactChanged)="this.onContactChanged($event)" *ngFor="let contact of this.contactsService.contacts" [contactInfo]="contact"></app-contact>
+  </div>
+</section>

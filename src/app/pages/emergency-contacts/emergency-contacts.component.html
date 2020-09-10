@@ -2,10 +2,10 @@
   <header class="header">
     <a class="header__back" routerLink="/settings"><i class="header__icon icofont-arrow-left"></i></a>
     <h5 class="header__title">Emergency Contacts</h5>
-    <a class="header__new"><i class="header__icon icofont-plus-square"></i></a>
+    <a class="header__new" routerLink="add"><i class="header__icon icofont-plus-square"></i></a>
   </header>
   <div class="contacts__content">
-    <app-contact *ngFor="let contact of this.contacts" [contactInfo]="contact" (onContactDelete)="this.onContactDelete($event)"></app-contact>
+    <app-contact *ngFor="let contact of this.contactsService.selectedContacts" [contactInfo]="contact" (onContactDelete)="this.onContactDelete($event)"></app-contact>
   </div>
 
   <!-- MODAL -->

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ContactsService } from '../../service/contacts-service/contacts.service';
 @Component({
   selector: 'app-add-contact',
   templateUrl: './add-contact.component.html',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(public contactsService: ContactsService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  public onContactChanged(item) {
+    console.log(item);
+    this.contactsService.updateContactInfo(item);
   }
+
 
 }

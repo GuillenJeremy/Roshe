@@ -8,7 +8,13 @@
     </h5>
     <p class="contact__number">{{contactInfo.contactNumber}}</p>
   </div>
-  <div class="contact__actions" (click)="this.onDeleteContact(contactInfo)">
+  <div *ngIf="this.isDeleteMode" class="contact__actions" (click)="this.onDeleteContact(contactInfo)">
     <span class="contact__icon"><i class="icofont-ui-close"></i></span>
+  </div>
+  <div *ngIf="!this.isDeleteMode" class="contact__actions" (click)="this.onDeleteContact(contactInfo)">
+    <label class="container">
+      <input type="checkbox" [checked]="contactInfo.isContactSelected" (change)="this.onChangeContact($event.target.checked)">
+      <span class="checkmark"></span>
+    </label>
   </div>
 </div>

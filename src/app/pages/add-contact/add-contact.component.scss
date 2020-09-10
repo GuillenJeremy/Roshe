@@ -1,0 +1,38 @@
+@import 'abstracts/variables';
+
+.contacts {
+  height: 100%;
+
+  &__content {
+    height: 93%;
+    padding-top: 2%;
+    overflow: auto;
+  }
+
+}
+
+.header {
+  width: 100%;
+  height: 7%;
+  box-shadow: 0 3px 7px rgba($color-black-800, .15);
+  display: flex;
+  align-items: center;
+  padding: 0 2%;
+  background: $color-pink;
+
+  &__back {
+    font-size: 2rem;
+    color: $color-white-100;
+    display: inline-block;
+    margin-right: .7rem;
+    text-decoration: none;
+  }
+
+
+  &__title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    color: $color-white-100;
+  }
+}

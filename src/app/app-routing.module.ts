@@ -5,6 +5,7 @@ import { ForumComponent } from './pages/forum/forum.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { EmergencyComponent } from './pages/emergency/emergency.component';
 import { EmergencyContactsComponent } from './pages/emergency-contacts/emergency-contacts.component';
+import { AddContactComponent } from './pages/add-contact/add-contact.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'settings/contacts',
     component: EmergencyContactsComponent
+  },
+  {
+    path: 'settings/contacts/add',
+    component: AddContactComponent
   }
 ];
 

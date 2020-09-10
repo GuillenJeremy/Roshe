@@ -36,4 +36,5 @@ export interface ContactInfo {
   contactPicture: string;
   contactName: String;
   contactNumber: String;
+  isContactSelected: boolean;
 }
